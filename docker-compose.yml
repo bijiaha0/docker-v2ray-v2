@@ -28,7 +28,7 @@ services:
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
   
   v2ray:
-    image: bijh-v2ray:0.2
+    image: bijh-v2ray:0.3
     container_name: v2ray
     restart: always
     command: v2ray run /etc/v2ray/config.json
